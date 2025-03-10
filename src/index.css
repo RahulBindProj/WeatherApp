@@ -1,0 +1,175 @@
+/* Reset some default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  padding: 0 10px;
+}
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 20px; /* Slightly more rounded */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  overflow: hidden;
+}
+
+.container {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.weather_data {
+  margin-bottom: 25px; /* Added a bit more spacing */
+}
+
+.city {
+  font-size: 1.6rem; /* Slightly larger for prominence */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.weather_type_img {
+  width: 120px; /* Larger icons */
+  height: 120px;
+  margin: 15px auto;
+}
+
+.degree {
+  font-size: 3rem; /* Larger font for temperature */
+  font-weight: bold;
+  color: #ff7f50; /* Orange color for the temperature */
+  margin: 15px 0;
+}
+
+.weather_type {
+  font-size: 1.3rem; /* Slightly larger for clarity */
+  color: #777;
+  text-transform: capitalize;
+}
+
+.loading {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.error {
+  color: #e74c3c; /* Bright red for error messages */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  gap: 20px; /* Increased spacing for a cleaner look */
+}
+
+.weather_city {
+  text-align: center;
+  padding: 14px; /* Slightly increased padding */
+  font-size: 1.2rem; /* Slightly larger font size */
+  width: 100%;
+  max-width: 320px; /* Slightly larger width */
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  margin-right: 10px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather_city:focus {
+  border-color: #ff7f50; /* Highlight color */
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 127, 80, 0.5); /* Added box-shadow for focus */
+}
+
+.search {
+  padding: 12px 20px; /* Slightly more padding */
+  font-size: 1.2rem;
+  background: #ff7f50;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 120px; /* Slightly larger button width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search:hover {
+  background: #ff6347;
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Large size for visibility */
+  font-weight: 700; /* Bold for emphasis */
+  color: #333; /* Dark text for high contrast */
+  margin-bottom: 20px; /* Space below the title */
+  text-transform: uppercase; /* Make title more prominent */
+  letter-spacing: 2px; /* Slight letter-spacing for added emphasis */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+@media (max-width: 600px) {
+  /* .form {
+    display: block;
+  } */
+  .container {
+    padding: 15px;
+  }
+
+  .degree {
+    font-size: 2.5rem; /* Slightly smaller degree font for smaller screens */
+  }
+
+  .weather_type_img {
+    width: 100px; /* Adjusted icon size */
+    height: 100px;
+  }
+
+  .weather_city {
+    max-width: 100%;
+    /* margin-bottom: 20px; */
+  }
+
+  .search {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem; /* Slightly smaller title font on mobile */
+  }
+}
