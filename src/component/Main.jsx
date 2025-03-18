@@ -4,6 +4,7 @@ const Main = () => {
   const [city, setCity] = useState("Mumbai");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const kelvinToCelsius = (kelvin) => kelvin - 273.15;
 
   var date = new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -14,6 +15,7 @@ const Main = () => {
 
   // const WeatherData = () => {
   const API_KEY = "8e0c22e3d15c59a3959abda710957e79";
+
   const fetchWeatherData = async () => {
     try {
       const response = await fetch(
@@ -70,7 +72,9 @@ const Main = () => {
                   className="weather_type_img"
                 />
               </figure>
-              <p className="degree">{weatherData.main.temp}°C</p>
+              <p className="degree">
+                {kelvinToCelsius(weatherData.main.temp).toFixed(2)}°C
+              </p>
               <p className="weather_type">
                 {weatherData.weather[0].description}
               </p>

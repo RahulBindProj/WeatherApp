@@ -144,9 +144,9 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* .form {
-    display: block;
-  } */
+  #root {
+    padding: 0 20px;
+  }
   .container {
     padding: 20px;
   }
@@ -163,6 +163,9 @@ body {
   .weather_city {
     max-width: 100%;
     /* margin-bottom: 20px; */
+  }
+  .city {
+    font-size: 1.4rem;
   }
 
   .search {
